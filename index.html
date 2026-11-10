@@ -96,6 +96,15 @@ summary::-webkit-details-marker{display:none}
 .theme .hero-title{margin-top:56px !important}
 }
 
+/* phone text tuning */
+@media (max-width: 820px){
+.theme section.invite{text-align:left !important;padding-top:88px !important}
+.theme section.invite h2{font-size:31px !important;line-height:1.16 !important;margin-bottom:24px !important}
+.theme section.invite p{font-size:15px;line-height:1.7}
+.theme section.invite p:last-child{margin-top:24px !important}
+.theme details.more[open] summary{display:none}
+}
+
 
 html{scroll-behavior:smooth}
 img,video{max-width:100%}
@@ -120,7 +129,7 @@ img,video{max-width:100%}
 <body>
 <main class="theme" style="font-family: 'Work Sans', system-ui, sans-serif; font-weight: 300; color: #3A4049; background: #F0EADC; line-height: 1.7; font-size: 17px; overflow-x: hidden">
 <section id="top" class="film" style="position: relative; min-height: max(100svh, 860px); box-sizing: border-box; overflow: hidden; background: #4A5A66; color: #F2EAD6; padding: 40px 4vw 48px; display: flex; flex-direction: column; justify-content: flex-start; gap: 64px">
-<img src="media/hero-light-rays.jpg" alt="Two divers drifting downward together, sunlight falling from the surface above" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 29%">
+<img fetchpriority="high" decoding="async" src="media/hero-light-rays.webp" srcset="media/hero-light-rays-900.webp 900w, media/hero-light-rays.webp 1105w" sizes="100vw" alt="Two divers drifting downward together, sunlight falling from the surface above" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 29%">
 <div class="veil" aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(40,52,64,0.10) 0%, rgba(40,52,64,0.05) 45%, rgba(30,40,50,0.40) 100%)"></div>
 <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
 <a href="#top" aria-label="Oceanic Remembrance, home" style="display: block; line-height: 0"><svg viewBox="0 0 100 100" width="56" height="56" role="img" aria-hidden="true" fill="none" stroke="#FFFFFF" stroke-linecap="round"><path d="M52 49 c-3 -3 -8 -1 -8 3 c0 6 8 9 13 5 c7 -5 5 -16 -3 -20 c-10 -5 -22 2 -23 13 c-1 13 11 22 23 20 c10 -2 17 -10 18 -20" stroke-width="5.5"></path><path d="M37 21 c8 -6 20 -8 28 -4" stroke-width="7"></path><path d="M24 37 c-6 12 -4 26 6 36" stroke-width="7"></path><path d="M78 34 c4 6 5 13 3 20" stroke-width="6"></path><path d="M43 86 c6 -3 12 3 18 0" stroke-width="6"></path><circle cx="76" cy="70" r="4.5" fill="#FFFFFF" stroke="none"></circle><circle cx="68" cy="79" r="2" fill="#FFFFFF" stroke="none"></circle><circle cx="30" cy="18" r="3" fill="#FFFFFF" stroke="none"></circle><circle cx="22" cy="25" r="2.6" stroke-width="1.6"></circle></svg></a>
@@ -157,35 +166,59 @@ img,video{max-width:100%}
 </div>
 </section>
 
-<section aria-label="The invitation" style="padding: 170px 24px 160px; text-align: center">
+<section class="d-only" aria-label="The invitation" style="padding: 170px 24px 160px; text-align: center">
 <div style="max-width: 860px; margin: 0 auto">
 <p style="margin: 0 0 32px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">The invitation</p>
-<h2 style="margin: 0 0 44px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 62px); line-height: 1.1">A homecoming to our oceanic origins, <span style="font-style: italic">to the soft, liquid body-mind and the resilience it grows.</span></h2>
-<p style="margin: 0 auto 22px; max-width: 54ch">Through freediving, water dance and somatic movement, we explore our bonds with the season’s migrating sea animals and rewild into a deeper embodied intelligence.</p>
-<p style="margin: 0 auto; max-width: 54ch">Oceanic Remembrance is an invitation to sense their presence through the body, and to turn that connection into care and protection for the sea and all its life.</p>
+<h2 style="margin: 0 0 44px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 62px); line-height: 1.1">Remembering our body’s ancient fluency with water, <span style="font-style: italic">and the oceanic origins we carry within.</span></h2>
+<p style="margin: 0 auto; max-width: 58ch">Through freediving, water dance, and somatic movement, we return to a softer, more fluid body-mind, settling the nervous system and rewilding our ways of being. Alongside the migrating lives of the sea, we enter their unique sensory worlds — following their orientation, rhythms, and ways of becoming, while remembering the resilience held within our own bodies.</p>
+<p style="margin: 36px 0 0; font-size: 14px; font-style: italic; letter-spacing: 0.04em; color: #66737F">*All levels welcome</p>
+</div>
+</section>
+<section class="invite m-only" aria-label="The invitation" style="padding: 170px 24px 160px; text-align: center">
+<div style="max-width: 860px; margin: 0 auto">
+<p style="margin: 0 0 32px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">The invitation</p>
+<h2 style="margin: 0 0 44px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 62px); line-height: 1.1">Remembering our body’s ancient fluency with water, <span style="font-style: italic">and the oceanic origins we carry within.</span></h2>
+<p style="margin: 0 auto; max-width: 58ch">Through freediving, water dance, and somatic movement, we return to a softer, more fluid body-mind, settling the nervous system and rewilding our ways of being. Alongside the migrating lives of the sea, we enter their unique sensory worlds — following their orientation, rhythms, and ways of becoming, while remembering the resilience held within our own bodies.</p>
+<p style="margin: 36px 0 0; font-size: 14px; font-style: italic; letter-spacing: 0.04em; color: #66737F">*All levels welcome</p>
 </div>
 </section>
 
 <section aria-label="Footage" style="position: relative; height: 720px; overflow: hidden; background: #7D8B98; color: #F0EADC; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px">
-<video src="media/mobula-loop.mp4" poster="media/mobula-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: sepia(0.16) saturate(0.9) contrast(0.95) brightness(1.03)"></video>
+<video poster="media/mobula-poster.webp" autoplay="" muted="" loop="" playsinline="" preload="none" class="lazyvid" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: sepia(0.16) saturate(0.9) contrast(0.95) brightness(1.03)"><source data-src="media/mobula-loop-phone.mp4" media="(max-width: 820px)" type="video/mp4"><source data-src="media/mobula-loop-hd.mp4" type="video/mp4"></video>
 <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(214,190,160,0.10); mix-blend-mode: screen"></div>
 <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(8,16,24,0.42) 0%, rgba(8,16,24,0.22) 60%, rgba(8,16,24,0.12) 100%)"></div>
 <div style="position: relative; display: flex; flex-direction: column; align-items: center">
 <p style="margin: 0 0 28px; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: #F2EAD6; text-shadow: 0 1px 12px rgba(0,0,0,0.45)">The largest gathering of mobula rays on Earth</p>
-<p style="margin: 0; font-family: 'Forum', serif; font-style: italic; font-weight: 300; font-size: clamp(38px, 5.5vw, 80px); line-height: 1.1; max-width: 16ch; text-shadow: 0 2px 24px rgba(0,0,0,0.40)">They arrive in their thousands.</p>
+<p style="margin: 0; font-family: 'Forum', serif; font-style: italic; font-weight: 300; font-size: clamp(30px, 3.8vw, 56px); line-height: 1.15; max-width: 18ch; text-shadow: 0 2px 24px rgba(0,0,0,0.40)">They arrive in their thousands.</p>
 </div>
 </section>
 
-<section style="max-width: 1320px; margin: 0 auto; padding: 140px 24px">
-<div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 20px">
+<section class="d-only" style="max-width: 1320px; margin: 0 auto; padding: 140px 24px">
+<div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: minmax(220px, auto); gap: 20px">
 <div style="grid-column: 1 / span 5; grid-row: span 2; display: flex; flex-direction: column; justify-content: center; padding-right: 32px">
 <p style="margin: 0 0 24px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Why Baja, why these dates</p>
 <h2 style="margin: 0 0 28px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(34px, 4vw, 50px); line-height: 1.1">Where desert meets sea.</h2>
-<p style="margin: 0 0 20px; font-size: 16px">Every spring, Munk's devil rays come to the bay of La Ventana to feed, court and mate. Our dates fall at the height of the season, when the water is usually calm and clear.</p>
-<p style="margin: 0; font-size: 16px">On land, it's desert: tall cardón cacti, dry riverbeds, long empty beaches. It's a quiet place, and most people slow down within a day or two.</p>
+<p style="margin: 0 0 18px; font-size: 16px">We meet at a special threshold, in a special time of year. Every spring, Munk’s devil rays gather in La Ventana, moving through the bay in great winged formations as they journey between worlds.</p>
+<p style="margin: 0 0 18px; font-size: 16px">They are joined by <strong style="font-weight: 500">sea lions, whales, dolphins, and orcas</strong>. For a few weeks, the bay becomes a meeting place for residents and nomads.&nbsp;</p>
+<p style="margin: 0 0 22px; font-size: 16px">On land, the desert holds its own rhythm: cardón cacti, dry riverbeds, and long empty beaches.</p>
+<p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.65; color: #5E6670">We arrive with gratitude, entering an ecosystem alive with wisdom and generosity, allowing the place itself to slow us down, soften us, and open our senses.</p>
 </div>
-<img loading="lazy" class="truecolour" src="media/baja-cactus-film.jpg" alt="Tall cardón cacti beside a dirt road, the Sea of Cortez and mountains behind" style="grid-column: 6 / span 3; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; display: block">
-<img loading="lazy" class="truecolour" src="media/baja-underwater-film.jpg" alt="Underwater, one woman gently holds another as she floats, sunlight rippling on the sand below" style="grid-column: 9 / span 4; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block">
+<img decoding="async" loading="lazy" class="truecolour" src="media/baja-cactus-film.webp" alt="Tall cardón cacti beside a dirt road, the Sea of Cortez and mountains behind" style="grid-column: 6 / span 3; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; display: block">
+<img decoding="async" loading="lazy" class="truecolour" src="media/baja-underwater-film.webp" srcset="media/baja-underwater-film-900.webp 900w, media/baja-underwater-film.webp 1500w" sizes="(max-width: 820px) 100vw, 50vw" alt="Underwater, one woman gently holds another as she floats, sunlight rippling on the sand below" style="grid-column: 9 / span 4; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block">
+</div>
+</section>
+<section class="m-only" style="max-width: 1320px; margin: 0 auto; padding: 140px 24px">
+<div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: minmax(220px, auto); gap: 20px">
+<div style="grid-column: 1 / span 5; grid-row: span 2; display: flex; flex-direction: column; justify-content: center; padding-right: 32px">
+<p style="margin: 0 0 24px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Why Baja, why these dates</p>
+<h2 style="margin: 0 0 28px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(34px, 4vw, 50px); line-height: 1.1">Where desert meets sea.</h2>
+<p style="margin: 0 0 18px; font-size: 16px">We meet at a special threshold, in a special time of year. Every spring, Munk’s devil rays gather in La Ventana, moving through the bay in great winged formations as they journey between worlds.</p>
+<details class="more"><summary style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #66737F; cursor: pointer; padding: 6px 0">READ MORE +</summary><div style="padding-top: 12px"><p style="margin: 0 0 18px; font-size: 16px">They are joined by <strong style="font-weight: 500">sea lions, whales, dolphins, and orcas</strong>. For a few weeks, the bay becomes a meeting place for residents and nomads.</p>
+<p style="margin: 0 0 22px; font-size: 16px">On land, the desert holds its own rhythm: cardón cacti, dry riverbeds, and long empty beaches.</p>
+<p style="margin: 0; font-size: 14px; font-style: italic; line-height: 1.65; color: #5E6670">We arrive with gratitude, entering an ecosystem alive with wisdom and generosity, allowing the place itself to slow us down, soften us, and open our senses.</p></div></details>
+</div>
+<img decoding="async" loading="lazy" class="truecolour" src="media/baja-cactus-film.webp" alt="Tall cardón cacti beside a dirt road, the Sea of Cortez and mountains behind" style="grid-column: 6 / span 3; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: 30% 40%; display: block">
+<img decoding="async" loading="lazy" class="truecolour" src="media/baja-underwater-film.webp" srcset="media/baja-underwater-film-900.webp 900w, media/baja-underwater-film.webp 1500w" sizes="(max-width: 820px) 100vw, 50vw" alt="Underwater, one woman gently holds another as she floats, sunlight rippling on the sand below" style="grid-column: 9 / span 4; grid-row: span 2; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block">
 </div>
 </section>
 
@@ -193,12 +226,12 @@ img,video{max-width:100%}
 <section class="d-only" style="background: #7D8B98; color: #F2EAD6; padding: 140px 24px">
 <div style="max-width: 760px; margin: 0 auto 80px; text-align: center">
 <p style="margin: 0 0 32px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">Interspecies learning</p>
-<h2 style="margin: 0 0 40px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.1">Learning alongside<br><span style="font-style: italic; font-size: 0.6em">What if an interspecies encounter doesn’t begin with chasing?</span></h2>
+<h2 style="margin: 0 0 40px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.1">Learning alongside<br><span style="display: block; margin-top: 14px; font-style: italic; font-size: 28px; white-space: nowrap">What if an interspecies encounter doesn’t begin with chasing?</span></h2>
 <p style="margin: 0 0 24px; color: #EEE6D3">We are redefining what it means to meet ocean wildlife. To make space, rather than chase, is our devotion to the sea — a radical departure from Baja’s safari tourism.</p>
-<p style="margin: 0 0 24px; color: #EEE6D3">We bring the encounter within. Through water dance and freediving, combining marine science with somatic arts, we open our senses to how ocean creatures move — through water, perception, and our own bodies.</p>
-<p style="margin: 0; color: #EEE6D3">Even when the rays are out of sight, we learn to sense the world they inhabit.</p>
+<p style="margin: 0 0 24px; color: #EEE6D3">To make space is to invite the encounter within. We weave therapeutic water arts, somatics, marine science, and somatic freediving into time spent deeply in the water — practicing, exploring, and becoming attuned to the place rather than searching for the next sighting.</p>
+<p style="margin: 0; color: #EEE6D3">In this season of abundance, the bay is already full of life. We slow down enough to let encounters unfold, discovering what becomes possible when we stop chasing the moment.</p>
 </div>
-<img loading="lazy" src="media/rays-ribbon.jpg" alt="Two freedivers descending in mirrored poses on either side of a long ribbon of cloth, light from the surface" style="display: block; width: 100%; max-width: 1240px; margin: 0 auto 80px; aspect-ratio: 21 / 8; object-fit: cover; object-position: center 45%; filter: none">
+<img decoding="async" loading="lazy" src="media/rays-ribbon.webp" srcset="media/rays-ribbon-900.webp 900w, media/rays-ribbon.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two freedivers descending in mirrored poses on either side of a long ribbon of cloth, light from the surface" style="display: block; width: 100%; max-width: 1240px; margin: 0 auto 80px; aspect-ratio: 21 / 8; object-fit: cover; object-position: center 45%; filter: none">
 <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 48px">
 <div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 20px">
 <h3 style="margin: 0 0 10px; font-family: 'Forum', serif; font-weight: 400; font-size: 30px">Engine off</h3>
@@ -213,15 +246,14 @@ img,video{max-width:100%}
 <p style="margin: 0; font-size: 16px; color: #EEE6D3">The rays decide how close they come. Some days that's very close.</p>
 </div>
 </div>
-<p style="margin: 80px auto 0; max-width: 46ch; text-align: center; font-family: 'Forum', serif; font-style: italic; font-size: 26px; line-height: 1.45">It's peak season, so we'll very likely see them. We just can't put it on the schedule.</p>
 </section>
 <section class="m-only" style="background: #7D8B98; color: #F2EAD6; padding: 88px 22px">
 <p style="margin: 0 0 18px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">Interspecies learning</p>
 <h2 style="margin: 0 0 14px; font-family: 'Forum', serif; font-weight: 300; font-size: 36px; line-height: 1.1">Learning alongside</h2>
-<p style="margin: 0 0 26px; font-family: 'Forum', serif; font-style: italic; font-size: 22px; line-height: 1.3; color: #F2EAD6">What if an interspecies encounter doesn’t begin with chasing?</p>
+<p style="margin: 0 0 26px; font-family: 'Forum', serif; font-style: italic; font-size: 3.4vw; line-height: 1.3; white-space: nowrap; color: #F2EAD6">What if an interspecies encounter doesn’t begin with chasing?</p>
 <p style="margin: 0 0 14px; font-size: 15px; line-height: 1.65; color: #EEE6D3">We are redefining what it means to meet ocean wildlife. To make space, rather than chase, is our devotion to the sea — a radical departure from Baja’s safari tourism.</p>
-<details style="margin: 0 0 32px"><summary style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #E6DCC6; cursor: pointer; padding: 6px 0">READ MORE +</summary><p style="margin: 12px 0 14px; font-size: 15px; line-height: 1.65; color: #EEE6D3">We bring the encounter within. Through water dance and freediving, combining marine science with somatic arts, we open our senses to how ocean creatures move — through water, perception, and our own bodies.</p><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #EEE6D3">Even when the rays are out of sight, we learn to sense the world they inhabit.</p></details>
-<img loading="lazy" src="media/rays-ribbon.jpg" alt="Two freedivers descending on either side of a long ribbon of cloth" style="display: block; width: calc(100% + 44px); margin: 0 -22px; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; filter: none">
+<details style="margin: 0 0 32px"><summary style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #E6DCC6; cursor: pointer; padding: 6px 0">READ MORE +</summary><p style="margin: 12px 0 14px; font-size: 15px; line-height: 1.65; color: #EEE6D3">To make space is to invite the encounter within. We weave therapeutic water arts, somatics, marine science, and somatic freediving into time spent deeply in the water — practicing, exploring, and becoming attuned to the place rather than searching for the next sighting.</p><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #EEE6D3">In this season of abundance, the bay is already full of life. We slow down enough to let encounters unfold, discovering what becomes possible when we stop chasing the moment.</p></details>
+<img decoding="async" loading="lazy" src="media/rays-ribbon.webp" srcset="media/rays-ribbon-900.webp 900w, media/rays-ribbon.webp 2000w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two freedivers descending on either side of a long ribbon of cloth" style="display: block; width: calc(100% + 44px); margin: 0 -22px; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; filter: none">
 <p style="margin: 28px 0 8px; font-family: 'Forum', serif; font-size: 22px; text-align: center">Engine off · No chasing · Their call</p>
 <p style="margin: 0; font-size: 14px; line-height: 1.6; text-align: center; color: #EEE6D3">We cut the motor and drift, slip in quietly, and let the rays decide how close they come.</p>
 </section>
@@ -237,25 +269,25 @@ img,video{max-width:100%}
 </div>
 <div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 64px 32px">
 <div style="grid-column: 1 / span 7">
-<img loading="lazy" src="media/pillar-aquatic-bodywork.jpg" alt="In shallow water, one woman cradles another who floats on her back, eyes closed" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 45%; margin-bottom: 28px">
+<img decoding="async" loading="lazy" src="media/pillar-aquatic-bodywork.webp" srcset="media/pillar-aquatic-bodywork-900.webp 900w, media/pillar-aquatic-bodywork.webp 1668w" sizes="(max-width: 820px) 100vw, 50vw" alt="In shallow water, one woman cradles another who floats on her back, eyes closed" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 45%; margin-bottom: 28px">
 <p style="margin: 0 0 8px; font-size: 12px; letter-spacing: 0.2em; color: #66737F">01</p>
 <h3 style="margin: 0 0 12px; font-family: 'Forum', serif; font-weight: 400; font-size: 34px">Water Dance &amp; Aquatic Bodywork</h3>
 <p style="margin: 0; font-size: 16px; max-width: 52ch">Meditation, intuitive movement and contact improvisation, in shallow and deep water. We follow the spirals found in nature and in our own bodies, waking the amphibious body and its fluid intelligence, and learning to rest within ourselves.</p>
 </div>
 <div style="grid-column: 9 / span 4; padding-top: 160px">
-<img loading="lazy" src="media/pillar-freediving-film.jpg" alt="A freediver descending calmly along the line, one hand on the rope" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 28px">
+<img decoding="async" loading="lazy" src="media/pillar-freediving-film.webp" alt="A freediver descending calmly along the line, one hand on the rope" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 28px">
 <p style="margin: 0 0 8px; font-size: 12px; letter-spacing: 0.2em; color: #66737F">02</p>
-<h3 style="margin: 0 0 12px; font-family: 'Forum', serif; font-weight: 400; font-size: 34px">Somatic freediving &amp; ocean safari</h3>
+<h3 style="margin: 0 0 12px; font-family: 'Forum', serif; font-weight: 400; font-size: 34px">Somatic freediving training &amp; ocean safari boat trips</h3>
 <p style="margin: 0; font-size: 16px">For beginners and experienced divers alike. Breathwork, practical guidance and a somatic approach, with no focus on numbers. Each day we take the boat out to explore different waters and quiet corners of the bay, letting each progression arrive in its own time.</p>
 </div>
 <div style="grid-column: 2 / span 4">
-<img loading="lazy" src="media/pillar-rituals.jpg" alt="A face resting in the sand, eyes closed, a seashell on the lips" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 28px">
+<img decoding="async" loading="lazy" src="media/pillar-rituals.webp" alt="A face resting in the sand, eyes closed, a seashell on the lips" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 28px">
 <p style="margin: 0 0 8px; font-size: 12px; letter-spacing: 0.2em; color: #66737F">03</p>
 <h3 style="margin: 0 0 12px; font-family: 'Forum', serif; font-weight: 400; font-size: 34px">Embodied rituals</h3>
 <p style="margin: 0; font-size: 16px">Ecosomatics in the cactus forest and dry arroyos. Time in silence, dancing on empty beaches, a bonfire at night. These are ways to integrate what the water gives, and to celebrate our creative harvest.</p>
 </div>
 <div style="grid-column: 7 / span 6; padding-top: 120px">
-<img loading="lazy" src="media/pillar-companionship.jpg" alt="Friends painting together around a lantern-lit table at night" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; margin-bottom: 28px">
+<img decoding="async" loading="lazy" src="media/pillar-companionship.webp" srcset="media/pillar-companionship-900.webp 900w, media/pillar-companionship.webp 1600w" sizes="(max-width: 820px) 100vw, 50vw" alt="Friends painting together around a lantern-lit table at night" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; margin-bottom: 28px">
 <p style="margin: 0 0 8px; font-size: 12px; letter-spacing: 0.2em; color: #66737F">04</p>
 <h3 style="margin: 0 0 12px; font-family: 'Forum', serif; font-weight: 400; font-size: 34px">Companionship</h3>
 <p style="margin: 0; font-size: 16px; max-width: 52ch">Sharing and writing circles, slow meals, long talks under desert stars. A small circle meeting in honest conversation, the kind where friendship quietly begins and stays.</p>
@@ -265,17 +297,22 @@ img,video{max-width:100%}
 <section class="m-only" style="padding: 88px 22px">
 <p style="margin: 0 0 18px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Four pillars of practice</p>
 <h2 style="margin: 0 0 22px; font-family: 'Forum', serif; font-weight: 300; font-size: 36px; line-height: 1.08">A weaving field of practice.</h2>
-<div style="border-bottom: 1px solid rgba(58,64,73,0.25)"><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img loading="lazy" src="media/pillar-aquatic-bodywork.jpg" alt="In shallow water, one woman cradles another who floats on her back" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 45%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">01</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Water Dance &amp; Aquatic Bodywork</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Meditation, intuitive movement and contact improvisation, in shallow and deep water. We follow the spirals found in nature and in our own bodies, waking the amphibious body and its fluid intelligence, and learning to rest within ourselves.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img loading="lazy" src="media/pillar-freediving-film.jpg" alt="A freediver descending calmly along the line" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 30%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">02</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Somatic freediving &amp; ocean safari</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">For beginners and experienced divers alike. Breathwork, practical guidance and a somatic approach, with no focus on numbers. Each day we take the boat out to explore different waters and quiet corners of the bay, letting each progression arrive in its own time.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img loading="lazy" src="media/pillar-rituals.jpg" alt="A face resting in the sand, a seashell on the lips" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 40%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">03</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Embodied rituals</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Ecosomatics in the cactus forest and dry arroyos. Time in silence, dancing on empty beaches, a bonfire at night. These are ways to integrate what the water gives, and to celebrate our creative harvest.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img loading="lazy" src="media/pillar-companionship.jpg" alt="Friends painting together around a lantern-lit table at night" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 50%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">04</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Companionship</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Sharing and writing circles, slow meals, long talks under desert stars. A small circle meeting in honest conversation, the kind where friendship quietly begins and stays.</p></details></div>
+<div style="border-bottom: 1px solid rgba(58,64,73,0.25)"><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img decoding="async" loading="lazy" src="media/pillar-aquatic-bodywork.webp" srcset="media/pillar-aquatic-bodywork-900.webp 900w, media/pillar-aquatic-bodywork.webp 1668w" sizes="(max-width: 820px) 100vw, 50vw" alt="In shallow water, one woman cradles another who floats on her back" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 45%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">01</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Water Dance &amp; Aquatic Bodywork</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Meditation, intuitive movement and contact improvisation, in shallow and deep water. We follow the spirals found in nature and in our own bodies, waking the amphibious body and its fluid intelligence, and learning to rest within ourselves.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img decoding="async" loading="lazy" src="media/pillar-freediving-film.webp" alt="A freediver descending calmly along the line" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 30%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">02</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Somatic freediving training &amp; ocean safari boat trips</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">For beginners and experienced divers alike. Breathwork, practical guidance and a somatic approach, with no focus on numbers. Each day we take the boat out to explore different waters and quiet corners of the bay, letting each progression arrive in its own time.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img decoding="async" loading="lazy" src="media/pillar-rituals.webp" alt="A face resting in the sand, a seashell on the lips" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 40%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">03</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Embodied rituals</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Ecosomatics in the cactus forest and dry arroyos. Time in silence, dancing on empty beaches, a bonfire at night. These are ways to integrate what the water gives, and to celebrate our creative harvest.</p></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: grid; grid-template-columns: 64px 1fr 20px; gap: 14px; align-items: center; padding: 14px 0; cursor: pointer"><img decoding="async" loading="lazy" src="media/pillar-companionship.webp" srcset="media/pillar-companionship-900.webp 900w, media/pillar-companionship.webp 1600w" sizes="(max-width: 820px) 100vw, 50vw" alt="Friends painting together around a lantern-lit table at night" style="display: block; width: 64px; height: 64px; object-fit: cover; object-position: center 50%; filter: none"><span><span style="display: block; font-size: 11px; letter-spacing: 0.2em; color: #66737F">04</span><span style="display: block; font-family: 'Forum', serif; font-size: 20px; line-height: 1.2">Companionship</span></span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px 78px; font-size: 14px; line-height: 1.6">Sharing and writing circles, slow meals, long talks under desert stars. A small circle meeting in honest conversation, the kind where friendship quietly begins and stays.</p></details></div>
 </section>
 </div>
 
-<section aria-label="Dorsal practices" style="background: #7D8B98; color: #F2EAD6; padding: 150px 24px; text-align: center">
-<div style="max-width: 860px; margin: 0 auto">
-<p style="margin: 0 0 44px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">A question to carry</p>
-<p style="margin: 0 0 22px; font-family: 'Forum', serif; font-style: italic; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.25">What are your dorsal practices?</p>
-<p style="margin: 0 0 22px; font-family: 'Forum', serif; font-style: italic; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35">What evolutionary repetitions have you cultivated to move through oceans?</p>
-<p style="margin: 0 0 48px; font-family: 'Forum', serif; font-style: italic; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.35">What are the ones you need to cultivate for the waves moving you now?</p>
-<p style="margin: 0; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">Alexis Pauline Gumbs · Undrowned</p>
+<section aria-label="Dorsal practices" style="background: #7D8B98; color: #F2EAD6; padding: 130px 24px; text-align: center">
+<div style="max-width: 720px; margin: 0 auto">
+<p style="margin: 0 0 36px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">A question to carry</p>
+<div style="border-top: 1px solid rgba(242,234,214,0.45); border-bottom: 1px solid rgba(242,234,214,0.45); padding: 48px 0 44px">
+<p aria-hidden="true" style="margin: 0 0 6px; font-family: 'Forum', serif; font-size: 56px; line-height: 0.6; color: rgba(242,234,214,0.5)">“</p>
+<blockquote style="margin: 0; font-family: 'Forum', serif; font-style: italic">
+<p style="margin: 0 0 12px; font-size: 26px; line-height: 1.35">What are your dorsal practices?</p>
+<p style="margin: 0 0 8px; font-size: 20px; line-height: 1.5">What evolutionary repetitions have you cultivated to move through oceans?</p>
+<p style="margin: 0; font-size: 20px; line-height: 1.5">What are the ones you need to cultivate for the waves moving you now?</p>
+</blockquote>
+</div>
+<p style="margin: 28px 0 0; font-family: 'Forum', serif; font-size: 22px; color: #F2EAD6">Alexis Pauline Gumbs, <span style="font-style: italic">Undrowned</span></p>
 </div>
 </section>
 
@@ -303,13 +340,13 @@ img,video{max-width:100%}
 <p style="margin: 0; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Footage &amp; stills</p>
 </div>
 <div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 16px">
-<img loading="lazy" src="media/gallery-sunset-table.jpg" alt="A long shared dinner table on the dunes at sunset" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-group-dance.jpg" alt="A group of freedivers dancing together under the surface" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 6; grid-row: span 2">
-<img loading="lazy" src="media/gallery-diver.jpg" alt="A smiling freediver swimming toward the camera over the reef" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-sealion.jpg" alt="A sea lion gliding along the rocky reef, fish all around, in black and white" style="filter: none; object-position: center 45%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-boat-embrace.jpg" alt="Two friends embracing at the bow of the boat, looking out over the open sea" style="filter: none; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; display: block; grid-column: span 6; grid-row: span 2">
-<img loading="lazy" src="media/gallery-hands.jpg" alt="Two freedivers holding hands just beneath the surface" style="filter: none; object-position: center 46%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
-<img loading="lazy" src="media/gallery-dolphins.jpg" alt="Dolphins leaping in front of a small fishing boat on a silver sea" style="filter: none; object-position: center 47%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
+<img decoding="async" loading="lazy" src="media/gallery-sunset-table.webp" alt="A long shared dinner table on the dunes at sunset" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-group-dance.webp" srcset="media/gallery-group-dance-900.webp 900w, media/gallery-group-dance.webp 1300w" sizes="(max-width: 820px) 100vw, 50vw" alt="A group of freedivers dancing together under the surface" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 6; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-diver.webp" alt="A smiling freediver swimming toward the camera over the reef" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-sealion.webp" srcset="media/gallery-sealion-900.webp 900w, media/gallery-sealion.webp 1346w" sizes="(max-width: 820px) 100vw, 50vw" alt="A sea lion gliding along the rocky reef, fish all around, in black and white" style="filter: none; object-position: center 45%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-boat-embrace.webp" srcset="media/gallery-boat-embrace-900.webp 900w, media/gallery-boat-embrace.webp 1600w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two friends embracing at the bow of the boat, looking out over the open sea" style="filter: none; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; display: block; grid-column: span 6; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-hands.webp" srcset="media/gallery-hands-900.webp 900w, media/gallery-hands.webp 1358w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two freedivers holding hands just beneath the surface" style="filter: none; object-position: center 46%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
+<img decoding="async" loading="lazy" src="media/gallery-dolphins.webp" alt="Dolphins leaping in front of a small fishing boat on a silver sea" style="filter: none; object-position: center 47%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
 </div>
 </div>
 </section>
@@ -320,26 +357,33 @@ img,video{max-width:100%}
 <p class="swipe" style="display: none; align-items: center; gap: 10px; margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #66737F">SWIPE <span style="display:inline-block;width:28px;border-top:1px solid currentColor"></span></p>
 </div>
 <div class="g12 gallery" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 16px">
-<img loading="lazy" src="media/gallery-sunset-table.jpg" alt="A long shared dinner table on the dunes at sunset" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-group-dance.jpg" alt="A group of freedivers dancing together under the surface" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 6; grid-row: span 2">
-<img loading="lazy" src="media/gallery-diver.jpg" alt="A smiling freediver swimming toward the camera over the reef" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-sealion.jpg" alt="A sea lion gliding along the rocky reef, fish all around, in black and white" style="filter: none; object-position: center 45%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
-<img loading="lazy" src="media/gallery-boat-embrace.jpg" alt="Two friends embracing at the bow of the boat, looking out over the open sea" style="filter: none; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; display: block; grid-column: span 6; grid-row: span 2">
-<img loading="lazy" src="media/gallery-hands.jpg" alt="Two freedivers holding hands just beneath the surface" style="filter: none; object-position: center 46%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
-<img loading="lazy" src="media/gallery-dolphins.jpg" alt="Dolphins leaping in front of a small fishing boat on a silver sea" style="filter: none; object-position: center 47%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
+<img decoding="async" loading="lazy" src="media/gallery-sunset-table.webp" alt="A long shared dinner table on the dunes at sunset" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-group-dance.webp" srcset="media/gallery-group-dance-900.webp 900w, media/gallery-group-dance.webp 1300w" sizes="(max-width: 820px) 100vw, 50vw" alt="A group of freedivers dancing together under the surface" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 6; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-diver.webp" alt="A smiling freediver swimming toward the camera over the reef" style="filter: none; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-sealion.webp" srcset="media/gallery-sealion-900.webp 900w, media/gallery-sealion.webp 1346w" sizes="(max-width: 820px) 100vw, 50vw" alt="A sea lion gliding along the rocky reef, fish all around, in black and white" style="filter: none; object-position: center 45%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-boat-embrace.webp" srcset="media/gallery-boat-embrace-900.webp 900w, media/gallery-boat-embrace.webp 1600w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two friends embracing at the bow of the boat, looking out over the open sea" style="filter: none; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; display: block; grid-column: span 6; grid-row: span 2">
+<img decoding="async" loading="lazy" src="media/gallery-hands.webp" srcset="media/gallery-hands-900.webp 900w, media/gallery-hands.webp 1358w" sizes="(max-width: 820px) 100vw, 50vw" alt="Two freedivers holding hands just beneath the surface" style="filter: none; object-position: center 46%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
+<img decoding="async" loading="lazy" src="media/gallery-dolphins.webp" alt="Dolphins leaping in front of a small fishing boat on a silver sea" style="filter: none; object-position: center 47%; width: 100%; height: 100%; object-fit: cover; display: block; grid-column: span 3">
 </div>
 </div>
 </section>
 
-<section style="position: relative; background: #7D8B98; color: #F2EAD6; padding: 160px 24px">
-<div style="max-width: 820px; margin: 0 auto">
-<p style="margin: 0 0 40px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #E6DCC6">Who this is for</p>
-<div style="display: flex; flex-direction: column; gap: 22px; font-family: 'Forum', serif; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.35">
-<p style="margin: 0">Dancers and movers who want to try their practice in open water.</p>
-<p style="margin: 0">Bodyworkers and somatic practitioners who'd like to work in the sea, not just near it.</p>
-<p style="margin: 0">Artists who need a week away to rest and make things.</p>
-<p style="margin: 0">Complete beginners to freediving, and certified divers who want a gentler approach.</p>
+<section class="d-only" style="position: relative; background: #7D8B98; color: #F2EAD6; padding: 160px 24px">
+<div style="max-width: 1100px; margin: 0 auto">
+<h2 style="margin: 0 0 72px; font-family: 'Forum', serif; font-weight: 400; font-size: clamp(48px, 6vw, 80px); line-height: 1.02; color: #F2EAD6">Who this is for</h2>
+<div class="g12 whofor" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 72px">
+<div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 22px"><p style="margin: 0 0 10px; font-family: 'Forum', serif; font-size: 28px; line-height: 1.25">You feel drawn to the ocean.</p><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E1CF">Not just to visit, but to listen with your whole body and heart. Freediving as a way to remember your place within the living earth and its waters.</p></div>
+<div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 22px"><p style="margin: 0 0 10px; font-family: 'Forum', serif; font-size: 28px; line-height: 1.25">You dream of swimming alongside marine life.</p><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E1CF">Meeting rays, sea lions and dolphins with respect and wonder, not as spectacle but as shared presence.</p></div>
+<div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 22px"><p style="margin: 0 0 10px; font-family: 'Forum', serif; font-size: 28px; line-height: 1.25">You want to learn without rushing.</p><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E1CF">New to freediving or already certified, with experienced guidance and strong safety support, growing at your own pace.</p></div>
+<div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 22px"><p style="margin: 0 0 10px; font-family: 'Forum', serif; font-size: 28px; line-height: 1.25">You’re curious about somatics, breath and movement.</p><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E1CF">As companions to ocean practice, supporting nervous system balance, awareness and embodied confidence.</p></div>
+<div style="border-top: 1px solid rgba(242,234,214,0.4); padding-top: 22px"><p style="margin: 0 0 10px; font-family: 'Forum', serif; font-size: 28px; line-height: 1.25">You value connection and inner space.</p><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E1CF">Shared meals, boat days, honest conversations, and the quiet courage to meet fear gently when it arises.</p></div>
 </div>
+</div>
+</section>
+<section class="m-only" style="position: relative; background: #7D8B98; color: #F2EAD6; padding: 160px 24px">
+<div style="max-width: 1100px; margin: 0 auto">
+<h2 style="margin: 0 0 36px; font-family: 'Forum', serif; font-weight: 400; font-size: 44px; line-height: 1.02; color: #F2EAD6">Who this is for</h2>
+<div class="whofor" style="border-bottom: 1px solid rgba(242,234,214,0.4)"><details style="border-top: 1px solid rgba(242,234,214,0.4)"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer"><span style="font-family: 'Forum', serif; font-size: 21px; line-height: 1.3">You feel drawn to the ocean.</span><span class="plus" style="font-size: 22px; color: #E6DCC6; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #E9E1CF">Not just to visit, but to listen with your whole body and heart. Freediving as a way to remember your place within the living earth and its waters.</p></details><details style="border-top: 1px solid rgba(242,234,214,0.4)"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer"><span style="font-family: 'Forum', serif; font-size: 21px; line-height: 1.3">You dream of swimming alongside marine life.</span><span class="plus" style="font-size: 22px; color: #E6DCC6; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #E9E1CF">Meeting rays, sea lions and dolphins with respect and wonder, not as spectacle but as shared presence.</p></details><details style="border-top: 1px solid rgba(242,234,214,0.4)"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer"><span style="font-family: 'Forum', serif; font-size: 21px; line-height: 1.3">You want to learn without rushing.</span><span class="plus" style="font-size: 22px; color: #E6DCC6; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #E9E1CF">New to freediving or already certified, with experienced guidance and strong safety support, growing at your own pace.</p></details><details style="border-top: 1px solid rgba(242,234,214,0.4)"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer"><span style="font-family: 'Forum', serif; font-size: 21px; line-height: 1.3">You’re curious about somatics, breath and movement.</span><span class="plus" style="font-size: 22px; color: #E6DCC6; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #E9E1CF">As companions to ocean practice, supporting nervous system balance, awareness and embodied confidence.</p></details><details style="border-top: 1px solid rgba(242,234,214,0.4)"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; cursor: pointer"><span style="font-family: 'Forum', serif; font-size: 21px; line-height: 1.3">You value connection and inner space.</span><span class="plus" style="font-size: 22px; color: #E6DCC6; transition: transform .2s">+</span></summary><p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #E9E1CF">Shared meals, boat days, honest conversations, and the quiet courage to meet fear gently when it arises.</p></details></div>
 </div>
 </section>
 
@@ -349,7 +393,7 @@ img,video{max-width:100%}
 <h2 style="margin: 0 0 72px; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.08">Three facilitators, between Baja and Bali.</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 64px 40px; align-items: start">
 <div>
-<img loading="lazy" src="media/team-julia.jpg" alt="Julia floating with eyes closed among the group, the sea behind" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
+<img decoding="async" loading="lazy" src="media/team-julia.webp" alt="Julia floating with eyes closed among the group, the sea behind" style="filter: none; position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
 <h3 style="margin: 0 0 4px; font-family: 'Forum', serif; font-weight: 400; font-size: 32px">Julia</h3>
 <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #66737F">Founder, Soul &amp; Sea Somatics</p>
 <p style="margin: 0 0 20px; font-size: 16px">A Baja-based deep water dancer, freediving instructor and breathwork facilitator with Colombian roots.</p>
@@ -361,7 +405,7 @@ img,video{max-width:100%}
 </details>
 </div>
 <div style="padding-top: 72px">
-<img loading="lazy" src="media/team-bethany.jpg" alt="Bethany holding another person floating in the water, looking down gently" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
+<img decoding="async" loading="lazy" src="media/team-bethany.webp" alt="Bethany holding another person floating in the water, looking down gently" style="filter: none; position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
 <h3 style="margin: 0 0 4px; font-family: 'Forum', serif; font-weight: 400; font-size: 32px">Bethany</h3>
 <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #66737F">Dancer &amp; aquatic bodyworker</p>
 <p style="margin: 0 0 20px; font-size: 16px">A Bali-based dancer and freediver, with roots in artistic swimming and a decade of dance and contemporary art in Indonesia.</p>
@@ -372,7 +416,7 @@ img,video{max-width:100%}
 </details>
 </div>
 <div style="padding-top: 144px">
-<img loading="lazy" src="media/team-jess.jpg" alt="Jess in dark water beneath a large green leaf, looking at the camera" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
+<img decoding="async" loading="lazy" src="media/team-jess.webp" alt="Jess in dark water beneath a large green leaf, looking at the camera" style="filter: none; position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 24px">
 <h3 style="margin: 0 0 4px; font-family: 'Forum', serif; font-weight: 400; font-size: 32px">Jess Hepin</h3>
 <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #66737F">Freediving instructor &amp; artist</p>
 <p style="margin: 0 0 20px; font-size: 16px">A Molchanovs freediving instructor and water, dance and sound artist from Taiwan, based in Bali.</p>
@@ -389,19 +433,19 @@ img,video{max-width:100%}
 <p style="margin: 0 0 12px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #66737F;">The team</p>
 <h2 style="margin: 0 0 36px; font-family: 'Forum', serif; font-weight: 400; font-size: 36px; line-height: 1.1">Three facilitators, between Baja and Bali.</h2>
 <div style="display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid rgba(58,64,73,0.25)">
-<img loading="lazy" src="media/team-julia.jpg" alt="Julia floating with eyes closed among the group" style="display: block; width: 92px; height: 118px; object-fit: cover">
+<img decoding="async" loading="lazy" src="media/team-julia.webp" alt="Julia floating with eyes closed among the group" style="filter: none; position: relative; z-index: 1; display: block; width: 92px; height: 118px; object-fit: cover">
 <div><h3 style="margin: 0 0 2px; font-family: 'Forum', serif; font-weight: 400; font-size: 24px">Julia</h3>
 <p style="margin: 0 0 12px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #66737F;margin-bottom:8px;font-size:10px">Founder, Soul &amp; Sea Somatics</p>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">A Baja-based deep water dancer, freediving instructor and breathwork facilitator with Colombian roots.</p></div>
 <div style="grid-column: 1 / -1"><details style="border-top: 1px solid rgba(58,64,73,0.35); padding: 12px 0"><summary style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; min-height: 24px">Read Julia's story +</summary><p style="margin: 14px 0 10px; font-size: 15px">Julia is a Baja-based Deep Water Dancer, certified freediving instructor, and breathwork facilitator with Colombian roots.</p><p style="margin: 0 0 10px; font-size: 15px">She guides people into the water with calm clarity and a touch of playfulness, inviting softness, trust in the breath, and ease in movement.</p><p style="margin: 0 0 10px; font-size: 15px">Beyond her ocean projects, she also co-leads expeditions to Mongolia to help bring clean drinking water to rural communities. Her life's work is a form of activism, supporting equal rights for humans, the Earth, and the more-than-human world.</p></details></div>
 </div><div style="display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid rgba(58,64,73,0.25)">
-<img loading="lazy" src="media/team-bethany.jpg" alt="Bethany holding another person floating in the water" style="display: block; width: 92px; height: 118px; object-fit: cover">
+<img decoding="async" loading="lazy" src="media/team-bethany.webp" alt="Bethany holding another person floating in the water" style="filter: none; position: relative; z-index: 1; display: block; width: 92px; height: 118px; object-fit: cover">
 <div><h3 style="margin: 0 0 2px; font-family: 'Forum', serif; font-weight: 400; font-size: 24px">Bethany</h3>
 <p style="margin: 0 0 12px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #66737F;margin-bottom:8px;font-size:10px">Dancer &amp; aquatic bodyworker</p>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">A Bali-based dancer and freediver, with roots in artistic swimming and a decade of dance and contemporary art in Indonesia.</p></div>
 <div style="grid-column: 1 / -1"><details style="border-top: 1px solid rgba(58,64,73,0.35); padding: 12px 0"><summary style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; min-height: 24px">Read Bethany's story +</summary><p style="margin: 14px 0 10px; font-size: 15px">Bethany is a trained dancer, freediver, and aquatic bodyworker based in Bali, Indonesia. With roots in artistic swimming and a decade studying dance and contemporary art in Indonesia, she works at the intersection of collective practice and expressive arts.</p><p style="margin: 0 0 10px; font-size: 15px">She supports residency and retreat projects, and guides individuals in unwinding and reconnecting through womb-like water immersion, somatic movement, and improvisation, cultivating rituals of collective care and co-creative, generative futures.</p></details></div>
 </div><div style="display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 22px 0; border-top: 1px solid rgba(58,64,73,0.25)">
-<img loading="lazy" src="media/team-jess.jpg" alt="Jess in dark water beneath a large green leaf" style="display: block; width: 92px; height: 118px; object-fit: cover">
+<img decoding="async" loading="lazy" src="media/team-jess.webp" alt="Jess in dark water beneath a large green leaf" style="filter: none; position: relative; z-index: 1; display: block; width: 92px; height: 118px; object-fit: cover">
 <div><h3 style="margin: 0 0 2px; font-family: 'Forum', serif; font-weight: 400; font-size: 24px">Jess Hepin</h3>
 <p style="margin: 0 0 12px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #66737F;margin-bottom:8px;font-size:10px">Freediving instructor &amp; artist</p>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">A Molchanovs freediving instructor and water, dance and sound artist from Taiwan, based in Bali.</p></div>
@@ -418,20 +462,20 @@ img,video{max-width:100%}
 <p style="margin: 0 0 28px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Pricing</p>
 <h2 style="margin: 0; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.08">Pricing and accommodation</h2>
 </div>
-<p style="grid-column: 8 / span 5; margin: 0; font-size: 17px">Six nights at a small seaside hotel in La Ventana, held just for our group. Up to 15 people.</p>
+<div style="grid-column: 8 / span 5"><p style="margin: 0 0 14px; font-size: 17px">A boutique seaside resort in La Ventana, held just for our group. Corners to gather, nooks to retreat, open space for yoga and dance, and slow tea by the fire under the stars.</p><p style="margin: 0; font-size: 14px; color: #5E6670">Six nights · Up to 15 people</p></div>
 </div>
 
 <div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-bottom: 140px">
 <figure style="grid-column: 1 / span 6; margin: 0">
-<img loading="lazy" src="media/venue-terrace.jpg" alt="An open shared terrace at golden hour, low cushioned seats and wooden tables around a tall cardón cactus, the sea beyond" style="width: 100%; height: 520px; object-fit: cover; object-position: center 45%; display: block">
+<img decoding="async" loading="lazy" src="media/venue-terrace.webp" srcset="media/venue-terrace-900.webp 900w, media/venue-terrace.webp 1808w" sizes="(max-width: 820px) 100vw, 50vw" alt="An open shared terrace at golden hour, low cushioned seats and wooden tables around a tall cardón cactus, the sea beyond" style="width: 100%; height: 520px; object-fit: cover; object-position: center 45%; display: block">
 <figcaption style="margin-top: 14px; font-size: 13px; letter-spacing: 0.04em; color: #5E6670">The shared terrace</figcaption>
 </figure>
 <figure style="grid-column: 7 / span 3; margin: 0">
-<img loading="lazy" src="media/venue-king.jpg" alt="A calm king room with plaster walls, a low bed and a wooden barn door" style="width: 100%; height: 520px; object-fit: cover; object-position: 48% center; display: block">
+<img decoding="async" loading="lazy" src="media/venue-king.webp" srcset="media/venue-king-900.webp 900w, media/venue-king.webp 1004w" sizes="(max-width: 820px) 100vw, 50vw" alt="A calm king room with plaster walls, a low bed and a wooden barn door" style="width: 100%; height: 520px; object-fit: cover; object-position: 48% center; display: block">
 <figcaption style="margin-top: 14px; font-size: 13px; letter-spacing: 0.04em; color: #5E6670">A king room</figcaption>
 </figure>
 <figure style="grid-column: 10 / span 3; margin: 0">
-<img loading="lazy" src="media/venue-queen.jpg" alt="A bright queen room, a sliding door opening onto the garden" style="width: 100%; height: 520px; object-fit: cover; object-position: 72% center; display: block">
+<img decoding="async" loading="lazy" src="media/venue-queen.webp" alt="A bright queen room, a sliding door opening onto the garden" style="width: 100%; height: 520px; object-fit: cover; object-position: 72% center; display: block">
 <figcaption style="margin-top: 14px; font-size: 13px; letter-spacing: 0.04em; color: #5E6670">A queen room, opening to the garden</figcaption>
 </figure>
 </div>
@@ -445,12 +489,11 @@ img,video{max-width:100%}
 <div class="g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; margin-bottom: 140px; padding: 72px 0; border-top: 1px solid #3A4049; border-bottom: 1px solid #3A4049">
 <div style="grid-column: 1 / span 4">
 <p style="margin: 0 0 20px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Nourishment</p>
-<h3 style="margin: 0; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15">Simple food, <span style="font-style: italic">made close to home.</span></h3>
+<h3 style="margin: 0; font-family: 'Forum', serif; font-weight: 300; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15">Fresh, local, <span style="font-style: italic">and made with love.</span></h3>
 </div>
 <div style="grid-column: 6 / span 7">
-<p style="margin: 0 0 16px; font-size: 17px">Meals are cooked with fresh, local ingredients. On a couple of evenings we head out to a few favourite neighbourhood spots from Julia's list.</p>
-<p style="margin: 0 0 16px; font-size: 17px">Between practices there's slow tea, long tables, and fireside conversation under the stars.</p>
-<p style="margin: 0; font-size: 17px">Tell us about any dietary needs or allergies when you register, and we'll cook around them.</p>
+<p style="margin: 0 0 16px; font-size: 17px">Meals are thoughtfully prepared with fresh, locally sourced ingredients, with vegetarian, pescatarian, and vegan options. Our local kitchen has always been a favourite among past participants, earning some of the retreat’s warmest compliments.</p>
+<p style="margin: 0; font-size: 17px">On a couple of evenings, we head out to a few favourite neighbourhood spots from Julia’s pocket list.</p>
 </div>
 </div>
 
@@ -492,37 +535,64 @@ img,video{max-width:100%}
 </div>
 </section>
 <section class="m-only" style="background: #DCD5C5; padding: 88px 22px">
-<p style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Pricing</p><h2 style="margin: 0 0 14px; font-family: 'Forum', serif; font-weight: 300; font-size: 36px; line-height: 1.08">Pricing and accommodation</h2><p style="margin: 0 0 28px; font-size: 15px; line-height: 1.6">Six nights at a small seaside hotel in La Ventana, held just for our group. Up to 15 people.</p>
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 28px"><img loading="lazy" src="media/venue-terrace.jpg" alt="An open shared terrace at golden hour around a tall cardón cactus, the sea beyond" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: center 45%"><img loading="lazy" src="media/venue-king.jpg" alt="A calm king room with plaster walls, a low bed and a wooden barn door" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: 48% center"><img loading="lazy" src="media/venue-queen.jpg" alt="A bright queen room, a sliding door opening onto the garden" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: 72% center"></div>
+<p style="margin: 0 0 16px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Pricing</p><h2 style="margin: 0 0 14px; font-family: 'Forum', serif; font-weight: 300; font-size: 36px; line-height: 1.08">Pricing and accommodation</h2><p style="margin: 0 0 8px; font-size: 15px; line-height: 1.6">A boutique seaside resort in La Ventana, held just for our group. Corners to gather, nooks to retreat, open space for yoga and dance, and slow tea by the fire under the stars.</p><p style="margin: 0 0 28px; font-size: 13px; color: #5E6670">Six nights · Up to 15 people</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 28px"><img decoding="async" loading="lazy" src="media/venue-terrace.webp" srcset="media/venue-terrace-900.webp 900w, media/venue-terrace.webp 1808w" sizes="(max-width: 820px) 100vw, 50vw" alt="An open shared terrace at golden hour around a tall cardón cactus, the sea beyond" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: center 45%"><img decoding="async" loading="lazy" src="media/venue-king.webp" srcset="media/venue-king-900.webp 900w, media/venue-king.webp 1004w" sizes="(max-width: 820px) 100vw, 50vw" alt="A calm king room with plaster walls, a low bed and a wooden barn door" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: 48% center"><img decoding="async" loading="lazy" src="media/venue-queen.webp" alt="A bright queen room, a sliding door opening onto the garden" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: 72% center"></div>
 <div style="border-bottom: 1px solid #3A4049; margin-bottom: 40px"><div style="display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-top: 1px solid #3A4049"><p style="margin: 0; font-family: 'Forum', serif; font-size: 22px; line-height: 1.2">Private king</p><p style="margin: 0; font-family: 'Forum', serif; font-size: 28px; line-height: 1.1">$3,500</p><p style="grid-column: 1 / -1; margin: 0; font-size: 13px; color: #5E6670">Private bath, AC, ocean or garden view</p></div><div style="display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-top: 1px solid #3A4049"><p style="margin: 0; font-family: 'Forum', serif; font-size: 22px; line-height: 1.2">Private queen</p><p style="margin: 0; font-family: 'Forum', serif; font-size: 28px; line-height: 1.1">$3,300</p><p style="grid-column: 1 / -1; margin: 0; font-size: 13px; color: #5E6670">Private bath, AC, ocean or garden view</p></div><div style="display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-top: 1px solid #3A4049"><p style="margin: 0; font-family: 'Forum', serif; font-size: 22px; line-height: 1.2">Shared room</p><p style="margin: 0; font-family: 'Forum', serif; font-size: 28px; line-height: 1.1">$3,000</p><p style="grid-column: 1 / -1; margin: 0; font-size: 13px; color: #5E6670">Two queen beds, private bath, AC</p></div></div>
-<details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Included<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><ul style="margin: 0; padding: 0 0 0 18px; color: #3A4049"><li style="margin: 0 0 6px">Six nights’ accommodation</li><li style="margin: 0 0 6px">Breakfast and lunch every day</li><li style="margin: 0 0 6px">Four dinners</li><li style="margin: 0 0 6px">Every practice: freediving, water dance, somatic movement, writing</li><li style="margin: 0 0 6px">Boat rides</li><li style="margin: 0 0 6px">A 1:3 instructor-to-diver ratio during training</li><li style="margin: 0 0 6px">All transportation during the retreat</li></ul></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Not included<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><ul style="margin: 0; padding: 0 0 0 18px; color: #454C55"><li style="margin: 0 0 6px">Gear rental. We can help you rent everything, at extra cost</li><li style="margin: 0 0 6px">Flights</li><li style="margin: 0 0 6px">Taxi from the airport to La Ventana</li></ul></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Nourishment<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><p style="margin: 0 0 10px">Meals are cooked with fresh, local ingredients. On a couple of evenings we head out to a few favourite neighbourhood spots from Julia's list.</p><p style="margin: 0 0 10px">Between practices there's slow tea, long tables, and fireside conversation under the stars.</p><p style="margin: 0 0 10px">Tell us about any dietary needs or allergies when you register, and we'll cook around them.</p></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25); border-bottom: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Access &amp; support<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><p style="margin: 0 0 10px">We keep two scholarship places for people this retreat would really help, who can't cover the full cost right now. If you can pay a bit more, the extra goes toward more places like these.</p><p style="margin: 0">Write to Bethany at <a href="mailto:bethany.aaw@gmail.com">bethany.aaw@gmail.com</a></p></div></details>
+<details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Included<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><ul style="margin: 0; padding: 0 0 0 18px; color: #3A4049"><li style="margin: 0 0 6px">Six nights’ accommodation</li><li style="margin: 0 0 6px">Breakfast and lunch every day</li><li style="margin: 0 0 6px">Four dinners</li><li style="margin: 0 0 6px">Every practice: freediving, water dance, somatic movement, writing</li><li style="margin: 0 0 6px">Boat rides</li><li style="margin: 0 0 6px">A 1:3 instructor-to-diver ratio during training</li><li style="margin: 0 0 6px">All transportation during the retreat</li></ul></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Not included<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><ul style="margin: 0; padding: 0 0 0 18px; color: #454C55"><li style="margin: 0 0 6px">Gear rental. We can help you rent everything, at extra cost</li><li style="margin: 0 0 6px">Flights</li><li style="margin: 0 0 6px">Taxi from the airport to La Ventana</li></ul></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Nourishment<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><p style="margin: 0 0 6px; font-family: 'Forum', serif; font-size: 19px; line-height: 1.3">Fresh, local, <span style="font-style: italic">and made with love.</span></p><p style="margin: 0 0 10px">Meals are thoughtfully prepared with fresh, locally sourced ingredients, with vegetarian, pescatarian, and vegan options. Our local kitchen has always been a favourite among past participants, earning some of the retreat’s warmest compliments.</p><p style="margin: 0">On a couple of evenings, we head out to a few favourite neighbourhood spots from Julia’s pocket list.</p></div></details><details style="border-top: 1px solid rgba(58,64,73,0.25); border-bottom: 1px solid rgba(58,64,73,0.25)"><summary style="display: flex; justify-content: space-between; align-items: center; padding: 16px 0; cursor: pointer; font-family: 'Forum', serif; font-size: 21px">Access &amp; support<span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary><div style="padding: 0 0 18px; font-size: 14px; line-height: 1.6"><p style="margin: 0 0 10px">We keep two scholarship places for people this retreat would really help, who can't cover the full cost right now. If you can pay a bit more, the extra goes toward more places like these.</p><p style="margin: 0">Write to Bethany at <a href="mailto:bethany.aaw@gmail.com">bethany.aaw@gmail.com</a></p></div></details>
 <div style="margin-top: 36px"><a href="https://forms.gle/FpJPtch77ZAdyfaX9" target="_blank" rel="noopener" style="display: block; text-align: center; padding: 18px 20px; background: #3A4049; color: #F0EADC; text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.24em; text-transform: uppercase; min-height: 44px; box-sizing: border-box">Register now</a>
 <p style="margin: 12px 0 0; font-size: 13px; color: #5E6670; text-align: center">Limited spots · Registration closes April 10th, 2027</p></div>
 </section>
 </div>
 
-<section style="max-width: 760px; margin: 0 auto; padding: 140px 24px">
+<section class="d-only" style="max-width: 760px; margin: 0 auto; padding: 140px 24px">
 <p style="margin: 0 0 40px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Questions</p>
 <details style="border-top: 1px solid #C9C2B2; padding: 22px 0">
-<summary style="font-family: 'Forum', serif; font-size: 26px">Do I need dance or diving experience?</summary>
-<p style="margin: 16px 0 0; font-size: 16px">No. If you're comfortable swimming, that's enough. We teach everything step by step.</p>
+<summary style="font-family: 'Forum', serif; font-size: 26px">Do I need prior experience?</summary>
+<p style="margin: 16px 0 0; font-size: 16px">No experience is required. Being comfortable swimming is enough. You’ll learn theory, equalization, and breath-hold techniques step by step. Certified divers are welcome to refine their skills and explore new depths.</p>
 </details>
 <details style="border-top: 1px solid #C9C2B2; padding: 22px 0">
-<summary style="font-family: 'Forum', serif; font-size: 26px">What if I feel anxious in the ocean?</summary>
-<p style="margin: 16px 0 0; font-size: 16px">That's normal, and you're not alone. We go slowly, start in shallow water, and you can always sit a session out.</p>
+<summary style="font-family: 'Forum', serif; font-size: 26px">What if I feel anxious about the ocean?</summary>
+<p style="margin: 16px 0 0; font-size: 16px">That’s natural. We approach the water gradually, building trust through breathwork, clear guidance, and supportive group dynamics. Baja’s waters are typically warm and calm, making it an ideal place to learn.</p>
+</details>
+<details style="border-top: 1px solid #C9C2B2; padding: 22px 0">
+<summary style="font-family: 'Forum', serif; font-size: 26px">What are the temperatures like?</summary>
+<p style="margin: 16px 0 0; font-size: 16px">Air temperatures are usually in the high 80s to low 90s °F. Water temperatures are warm — often in the 80s °F. Expect mostly sunny days, with occasional moderate wind.</p>
 </details>
 <details style="border-top: 1px solid #C9C2B2; padding: 22px 0">
 <summary style="font-family: 'Forum', serif; font-size: 26px">Where do I fly into?</summary>
-<p style="margin: 16px 0 0; font-size: 16px">La Paz (LAP), about 45 minutes away, or Los Cabos (SJD), about 2.5 hours.</p>
+<p style="margin: 16px 0 0; font-size: 16px">Fly into Los Cabos (SJD) — about a 2.5-hour drive — or La Paz (LAP) — about 45 minutes away.</p>
 </details>
 <details style="border-top: 1px solid #C9C2B2; border-bottom: 1px solid #C9C2B2; padding: 22px 0">
 <summary style="font-family: 'Forum', serif; font-size: 26px">Can you accommodate dietary needs?</summary>
-<p style="margin: 16px 0 0; font-size: 16px">Yes. We ask when you register and cook for different eating styles and allergies.</p>
+<p style="margin: 16px 0 0; font-size: 16px">Yes. We collect dietary information in advance and provide nourishing options for different eating styles and allergies.</p>
+</details>
+</section>
+<section class="m-only" style="max-width: 760px; margin: 0 auto; padding: 140px 24px">
+<p style="margin: 0 0 40px; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: #66737F">Questions</p>
+<details style="border-top: 1px solid #C9C2B2; padding: 16px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Forum', serif; font-size: 21px; line-height: 1.3"><span>Do I need prior experience?</span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary>
+<p style="margin: 12px 0 4px; font-size: 14px; line-height: 1.65">No experience is required. Being comfortable swimming is enough. You’ll learn theory, equalization, and breath-hold techniques step by step. Certified divers are welcome to refine their skills and explore new depths.</p>
+</details>
+<details style="border-top: 1px solid #C9C2B2; padding: 16px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Forum', serif; font-size: 21px; line-height: 1.3"><span>What if I feel anxious about the ocean?</span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary>
+<p style="margin: 12px 0 4px; font-size: 14px; line-height: 1.65">That’s natural. We approach the water gradually, building trust through breathwork, clear guidance, and supportive group dynamics. Baja’s waters are typically warm and calm, making it an ideal place to learn.</p>
+</details>
+<details style="border-top: 1px solid #C9C2B2; padding: 16px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Forum', serif; font-size: 21px; line-height: 1.3"><span>What are the temperatures like?</span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary>
+<p style="margin: 12px 0 4px; font-size: 14px; line-height: 1.65">Air temperatures are usually in the high 80s to low 90s °F. Water temperatures are warm — often in the 80s °F. Expect mostly sunny days, with occasional moderate wind.</p>
+</details>
+<details style="border-top: 1px solid #C9C2B2; padding: 16px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Forum', serif; font-size: 21px; line-height: 1.3"><span>Where do I fly into?</span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary>
+<p style="margin: 12px 0 4px; font-size: 14px; line-height: 1.65">Fly into Los Cabos (SJD) — about a 2.5-hour drive — or La Paz (LAP) — about 45 minutes away.</p>
+</details>
+<details style="border-top: 1px solid #C9C2B2; border-bottom: 1px solid #C9C2B2; padding: 16px 0">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Forum', serif; font-size: 21px; line-height: 1.3"><span>Can you accommodate dietary needs?</span><span class="plus" style="font-size: 22px; color: #66737F; transition: transform .2s">+</span></summary>
+<p style="margin: 12px 0 4px; font-size: 14px; line-height: 1.65">Yes. We collect dietary information in advance and provide nourishing options for different eating styles and allergies.</p>
 </details>
 </section>
 
 <section aria-label="Join us" style="position: relative; background: #8E9BA7; color: #F2EAD6; padding: 200px 24px; text-align: center; overflow: hidden">
-<img loading="lazy" src="media/join-diver.jpg" alt="A freediver gliding upward toward sunbeams breaking through the surface" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%">
+<img decoding="async" loading="lazy" src="media/join-diver.webp" srcset="media/join-diver-900.webp 900w, media/join-diver.webp 1732w" sizes="(max-width: 820px) 100vw, 50vw" alt="A freediver gliding upward toward sunbeams breaking through the surface" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(118,132,146,0.50)"></div>
 <div style="position: relative; max-width: 820px; margin: 0 auto">
 <p style="margin: 0 0 32px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #E6DCC6">The rays return in May</p>
@@ -537,5 +607,7 @@ img,video{max-width:100%}
 </section>
 </main>
 <script>document.querySelectorAll('.moverlay a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mnav').checked=false;});});</script>
+<script>(function(){var vs=document.querySelectorAll('video.lazyvid');function go(v){v.querySelectorAll('source[data-src]').forEach(function(s){s.src=s.dataset.src;s.removeAttribute('data-src');});v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}
+if(!('IntersectionObserver' in window)){vs.forEach(go);return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);go(e.target);}});},{rootMargin:'800px 0px'});vs.forEach(function(v){io.observe(v);});})();</script>
 </body>
 </html>
